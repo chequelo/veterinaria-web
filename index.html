@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Consultorio Veterinario a Domicilio · Fisioterapia y medicina de cabecera</title>
-  <meta name="description" content="Atención veterinaria a domicilio: fisioterapia, control de presión arterial, vacunas, consultas y desparasitación. Medicina de cabecera para tu mascota, en tu casa." />
+  <title>agente_veterinario · Asistente de WhatsApp para veterinarios a domicilio</title>
+  <meta name="description" content="Asistente por WhatsApp para veterinarios a domicilio: captura cada visita, lleva la agenda, registra la historia clínica y arma el estado de cuenta mensual automáticamente. Sin planillas, sin apps." />
   <style>
     :root { --verde:#1f7a5a; --verde-osc:#155c43; --tinta:#1c2b26; --gris:#5b6b65; --crema:#f5f8f6; }
     * { box-sizing:border-box; margin:0; padding:0; }
@@ -15,19 +15,24 @@
     .brand { font-weight:700; font-size:1.15rem; letter-spacing:.2px; }
     .brand span { opacity:.85; font-weight:400; }
     nav a { color:#eafaf3; text-decoration:none; margin-left:20px; font-size:.95rem; }
-    .hero { background:linear-gradient(160deg,var(--verde),var(--verde-osc)); color:#fff; padding:72px 0 84px; }
-    .hero h1 { font-size:2.3rem; line-height:1.2; max-width:18ch; }
-    .hero p { margin-top:16px; font-size:1.15rem; opacity:.95; max-width:52ch; }
+    .hero { background:linear-gradient(160deg,var(--verde),var(--verde-osc)); color:#fff; padding:76px 0 88px; }
+    .hero h1 { font-size:2.35rem; line-height:1.18; max-width:20ch; }
+    .hero p { margin-top:16px; font-size:1.18rem; opacity:.95; max-width:56ch; }
     .cta { display:inline-block; margin-top:28px; background:#fff; color:var(--verde-osc); font-weight:600; padding:13px 26px; border-radius:999px; text-decoration:none; }
+    .kicker { text-transform:uppercase; letter-spacing:.14em; font-size:.8rem; opacity:.85; margin-bottom:14px; }
     section { padding:64px 0; }
-    h2 { font-size:1.6rem; color:var(--verde-osc); margin-bottom:8px; }
-    .lead { color:var(--gris); max-width:60ch; margin-bottom:32px; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
-    .card { background:var(--crema); border:1px solid #e4ede9; border-radius:14px; padding:22px; }
-    .card h3 { color:var(--verde-osc); font-size:1.1rem; margin-bottom:6px; }
+    h2 { font-size:1.65rem; color:var(--verde-osc); margin-bottom:8px; }
+    .lead { color:var(--gris); max-width:62ch; margin-bottom:34px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:20px; }
+    .card { background:var(--crema); border:1px solid #e4ede9; border-radius:14px; padding:24px; }
+    .card h3 { color:var(--verde-osc); font-size:1.08rem; margin-bottom:6px; }
     .card p { color:var(--gris); font-size:.96rem; }
-    .sobre { background:var(--crema); }
-    .contacto .grid { grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
+    .steps { background:var(--crema); }
+    .steps ol { list-style:none; counter-reset:s; display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:20px; }
+    .steps li { counter-increment:s; background:#fff; border:1px solid #e4ede9; border-radius:14px; padding:22px 22px 22px 22px; }
+    .steps li::before { content:counter(s); display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:50%; background:var(--verde); color:#fff; font-weight:700; margin-bottom:10px; }
+    .steps h3 { color:var(--verde-osc); font-size:1.05rem; margin-bottom:4px; }
+    .steps p { color:var(--gris); font-size:.95rem; }
     .contacto .card { background:#fff; }
     .contacto a { color:var(--verde-osc); text-decoration:none; font-weight:600; }
     footer { background:var(--tinta); color:#c8d4cf; padding:28px 0; font-size:.9rem; }
@@ -38,10 +43,10 @@
 <body>
   <header>
     <div class="wrap">
-      <div class="brand">Consultorio Veterinario <span>· a domicilio</span></div>
+      <div class="brand">agente_veterinario <span>· asistente por WhatsApp</span></div>
       <nav>
-        <a href="#servicios">Servicios</a>
-        <a href="#sobre">Nosotros</a>
+        <a href="#que-hace">Qué hace</a>
+        <a href="#como">Cómo funciona</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
@@ -49,53 +54,58 @@
 
   <div class="hero">
     <div class="wrap">
-      <h1>Atención veterinaria a domicilio</h1>
-      <p>Fisioterapia y medicina de cabecera para tu mascota, en la comodidad de tu casa.
-         Cuidado cercano, sin traslados ni salas de espera.</p>
-      <a class="cta" href="#contacto">Coordinar una visita</a>
+      <div class="kicker">Para veterinarios a domicilio</div>
+      <h1>Captura cada visita y factura sin planillas, todo por WhatsApp</h1>
+      <p>El asistente que registra lo que hiciste en cada visita, lleva tu agenda y arma el
+         estado de cuenta mensual solo. Vos hablás; el resto se ordena.</p>
+      <a class="cta" href="#contacto">Quiero probarlo</a>
     </div>
   </div>
 
-  <section id="servicios">
+  <section id="que-hace">
     <div class="wrap">
-      <h2>Servicios</h2>
-      <p class="lead">Atención integral en tu hogar, con seguimiento personalizado.</p>
+      <h2>Qué hace el asistente</h2>
+      <p class="lead">Convierte tu día a domicilio en registros ordenados y facturables, sin
+        que dejes de usar WhatsApp como siempre.</p>
       <div class="grid">
-        <div class="card"><h3>Fisioterapia</h3><p>Rehabilitación y sesiones de kinesiología a domicilio para recuperación y bienestar.</p></div>
-        <div class="card"><h3>Control de presión arterial</h3><p>Medición y seguimiento de la presión, clave en el cuidado de mascotas mayores.</p></div>
-        <div class="card"><h3>Vacunación</h3><p>Plan de vacunas al día, aplicado en casa con calendario y recordatorios.</p></div>
-        <div class="card"><h3>Consultas a domicilio</h3><p>Medicina de cabecera: chequeos, diagnóstico y tratamiento sin salir de tu casa.</p></div>
-        <div class="card"><h3>Desparasitación</h3><p>Prevención interna y externa según cada mascota y su entorno.</p></div>
+        <div class="card"><h3>Captura por WhatsApp</h3><p>Le contás qué hiciste ("fisio a Toby, presión 150/90") y lo convierte en un registro facturable con el precio de tu tabla.</p></div>
+        <div class="card"><h3>Agenda de visitas</h3><p>Agendás, ves tu día y marcás visitas cumplidas. Al cumplirse, se factura solo.</p></div>
+        <div class="card"><h3>Estado de cuenta automático</h3><p>A fin de mes, el total por cada dueño sale de las visitas cumplidas. Se terminó reconstruir a mano.</p></div>
+        <div class="card"><h3>Alta de clientes y mascotas</h3><p>Registrás un dueño nuevo y su mascota por chat, con los datos que hacen falta para facturar.</p></div>
+        <div class="card"><h3>Historia clínica</h3><p>Presión arterial, vacunas, tratamientos y notas quedan en la historia de cada paciente.</p></div>
+        <div class="card"><h3>Confirmaciones y recordatorios</h3><p>Avisa y confirma visitas con los dueños, y recuerda vacunas y controles pendientes.</p></div>
       </div>
     </div>
   </section>
 
-  <section id="sobre" class="sobre">
+  <section id="como" class="steps">
     <div class="wrap">
-      <h2>Sobre nosotros</h2>
-      <p class="lead">Somos un servicio de veterinaria a domicilio especializado en fisioterapia y
-        medicina de cabecera. Atendemos a cada mascota en su ambiente, reduciendo el estrés del
-        traslado y construyendo un vínculo de confianza con cada familia. Priorizamos la atención
-        preventiva y el seguimiento cercano.</p>
+      <h2>Cómo funciona</h2>
+      <p class="lead">Tres pasos, cero planillas.</p>
+      <ol>
+        <li><h3>Le hablás</h3><p>Al terminar la visita, le mandás un audio o texto por WhatsApp con lo que hiciste.</p></li>
+        <li><h3>Ordena y confirma</h3><p>Estructura el servicio, aplica el precio de tu tabla y te confirma en una línea.</p></li>
+        <li><h3>Facturás sin esfuerzo</h3><p>Todo queda registrado; el estado de cuenta mensual se arma solo.</p></li>
+      </ol>
     </div>
   </section>
 
   <section id="contacto" class="contacto">
     <div class="wrap">
       <h2>Contacto</h2>
-      <p class="lead">Coordinamos visitas por WhatsApp. Escribinos y te respondemos a la brevedad.</p>
+      <p class="lead">¿Sos veterinario a domicilio y querés probarlo? Escribinos.</p>
       <div class="grid">
         <div class="card"><h3>WhatsApp / Teléfono</h3><p><a href="#"><span class="fill">[+56 9 XXXX XXXX]</span></a></p></div>
-        <div class="card"><h3>Email</h3><p><a href="#"><span class="fill">[contacto@tudominio.cl]</span></a></p></div>
-        <div class="card"><h3>Zona de atención</h3><p><span class="fill">[Ciudad / comunas]</span></p></div>
+        <div class="card"><h3>Email</h3><p><a href="#"><span class="fill">[contacto@tudominio.com]</span></a></p></div>
+        <div class="card"><h3>Responsable</h3><p><span class="fill">[Nombre / empresa]</span></p></div>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="wrap">
-      <div>© <span id="y"></span> Consultorio Veterinario a Domicilio</div>
-      <div>Medicina veterinaria · Fisioterapia · A domicilio</div>
+      <div>© <span id="y"></span> agente_veterinario</div>
+      <div>Asistente por WhatsApp para veterinarios a domicilio</div>
     </div>
   </footer>
   <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
